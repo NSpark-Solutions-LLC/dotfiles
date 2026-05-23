@@ -16,6 +16,12 @@ echo ""
 
 mkdir -p "$COMMANDS_DIR"
 
+# Symlink global CLAUDE.md into ~/.claude/
+if [[ -f "$DOTFILES_CLAUDE/CLAUDE.md" ]]; then
+  ln -sf "$DOTFILES_CLAUDE/CLAUDE.md" "$CLAUDE_DIR/CLAUDE.md"
+  echo "  Linked  CLAUDE.md"
+fi
+
 # Symlink generic slash-command skills into ~/.claude/commands/
 for f in "$DOTFILES_CLAUDE/commands/"*.md; do
   [[ -f "$f" ]] || continue
