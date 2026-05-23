@@ -1,0 +1,22 @@
+{
+    "hooks": {
+        "Stop": [
+            {
+                "matcher": "",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "~/.claude/stop-hook-git-check.sh"
+                    },
+                    {
+                        "type": "command",
+                        "command": "~/.claude/stop-hook-ts-check.sh"
+                    }
+                ]
+            }
+        ]
+    },
+    "permissions": {
+        "allow": ["Skill"]
+    }
+}
